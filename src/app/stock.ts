@@ -1,0 +1,34 @@
+export const products = [
+  {
+    productName: 'MacBook Air',
+    price: 1000,
+    image : 'product01.png',
+    solde : 30,
+    category : 'Computer',
+    description: 'Ecran 4.7" - Processeur Hexa-core (2x Monsoon + 4x Mistral) - Ram 2 Go - Mémoire de stockage 64 Go - 2 x Appreil Photo 12 MP (arriére) , 7 MP ( Frontale ) - Lecteur d\'empreinte digitale - Fast Charging & Qi Wireless Charging - IOS 11 - Batterie : 1821 Mah - 4G - GPS- Couleur Gold'
+  },
+  {
+    productName: 'Casque',
+    price: 180,
+    image : 'product02.png',
+    solde : 0,
+    category : 'Accessory',
+    description: '',
+  },
+  {
+    productName: 'Tablette',
+    price: 420,
+    image : 'product04.png',
+    category : 'Tablette',
+    solde : 20,
+    description: 'Double SIM - Ecran 6.3" Full HD+ - Résolution 2340 x 1080 - Processeur Kirin 710 Octa-Core 4 x Cortex A73 2.2 GHz + 4 x Cortex A53 1.7 GHz - Android 8.1 - RAM 4 Go - Mémoire 128 Go up to 256 Go - Caméra arrière: 16 MP + 2 MP - Caméra avant: 24 MP + 2 MP - Wifi - 4G - Bluetooth - Batterie 3340 mAh'
+  },
+  {
+    productName: 'Samsung',
+    price: 999,
+    image : 'product07.png',
+    solde: 0,
+    category : 'Smarphone',
+    description: 'Double SIM - Ecran 6.15" Full HD+ - Résolution: 2312 x 1080p - Processeur Kirin 710 Octa-core, 4 x Cortex-A73 2.2 GHz + 4 x Cortex-A53 1.7 GHz - Android 9.0 - RAM 4 Go - Mémoire 128 Go - Triple caméra arrière: 24 MP + 8 MP + 2 MP - Caméra avant: 32 MP - Wifi - 4G - GPS - Bluetooth - NFC - Lecteur d\'empreinte digitale - Batterie 3340 mAh'
+  },
+];

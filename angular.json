@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "webuy"
+  "defaultProject": "webuy",
+  "cli": {
+    "analytics": "ca1d582b-995a-4334-9ab0-cb0143531528"
+  }
 }

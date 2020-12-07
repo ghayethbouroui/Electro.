@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import {RegisterComponent} from './register/register.component';
 import {RouterModule} from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { ProductComponent } from './product/product.component';
 const routes: Routes = [
   // Define routes for the landing / home page, create a separate component for the layout of home page
   // put only header, footer and router-outlet there
@@ -19,6 +20,9 @@ const routes: Routes = [
       {
         path: 'login', component: LoginComponent
       },
+      {
+        path: 'products' , component: ProductComponent
+      }
     ]
   
   
