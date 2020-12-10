@@ -10,7 +10,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { ProductComponent } from './product/product.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 
@@ -23,8 +22,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ContactComponent,
     RegisterComponent,
     LoginComponent,
-    ProductComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
