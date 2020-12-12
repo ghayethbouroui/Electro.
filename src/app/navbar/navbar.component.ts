@@ -1,4 +1,6 @@
+import { ThisReceiver, ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { LocalstorageService } from '../localstorage.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  wishlist;
+  qty = 0;
+  constructor(
+    private localstorage : LocalstorageService
+  ) { }
 
   ngOnInit(): void {
+    this.wishlist = this.localstorage.loadFromLocalStorage('wishlist');
+    for (let index = 0; index < this.wishlist.length; index++) {
+      this.qty ++;
+      
+    }
   }
 
 }

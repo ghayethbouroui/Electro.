@@ -7,15 +7,15 @@ export class LocalstorageService {
 
   constructor() { }
 
-  saveToLocalStorage(wishlist) {
-    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+  saveToLocalStorage(x:string,y) {
+    localStorage.setItem(x, JSON.stringify(y));
   }
 
-  loadFromLocalStorage() {
-    return JSON.parse(localStorage.getItem('wishlist'))|| [];
+  loadFromLocalStorage(x : string) {
+    return JSON.parse(localStorage.getItem(x))|| [];
   }
 
-  clearLocalStorage() {
-    localStorage.removeItem('wishlist');
+  clearLocalStorage(x : string) {
+    localStorage.removeItem(x);
   }
 }

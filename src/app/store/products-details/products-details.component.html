@@ -26,7 +26,6 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-o"></i>
               </div>
-              <a class="review-link" href="#">Add your review</a>
             </div>
             <div>
               <h3 class="product-price">{{product?.price | currency:'USD'}} </h3>
@@ -36,16 +35,7 @@
   
   
             <div class="add-to-cart">
-              <div class="qty-label">
-                Qty
-                <div class="input-number">
-                  <input #quantity [max]="product?.quantity" [min]="product?.quantity >= 1 ? product?.quantity : 0"
-                         readonly type="number" value="{{product?.quantity >= 1 ? 1 : 0}}">
-                  <span  class="qty-up">+</span>
-                  <span  class="qty-down">-</span>
-                </div>
-              </div>
-              <button *ngIf="product?.quantity >= 1" class="add-to-cart-btn"><i
+              <button class="add-to-cart-btn"><i
                 class="fa fa-shopping-cart"></i>Add To Cart
               </button>
             </div>

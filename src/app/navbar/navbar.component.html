@@ -25,8 +25,8 @@
           <!-- LOGO -->
           <div class="col-md-3">
             <div class="header-logo">
-              <a routerLink="/" class="logo">
-                <img src="../../../assets/img/logo.png" alt="">
+              <a routerLink="/" class="logo" style="cursor: pointer;">
+                <img src="../../../assets/img/logo.png" alt="" >
               </a>
             </div>
           </div>
@@ -53,45 +53,21 @@
             <div class="header-ctn">
               <!-- Wishlist -->
               <div>
-                <a href="#">
+                <a routerLink="/store/wishlist">
                   <i class="fa fa-heart-o"></i>
                   <span>Your Wishlist</span>
-                  <div class="qty">0</div>
+                  <div class="qty">{{qty}}</div>
                 </a>
               </div>
               <!-- /Wishlist -->
   
               <!-- Cart -->
-              <div class="dropdown" >
-                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" style="cursor: pointer;">
+              <div >
+                <a routerLink="/store/cartlist" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" style="cursor: pointer;">
                   <i class="fa fa-shopping-cart"></i>
                   <span>Your Cart</span>
                   <div class="qty">cart</div>
                 </a>
-                <div class="cart-dropdown" >
-                  <div class="cart-list" >
-                    <div class="product-widget">
-                      <div class="product-img">
-                        <img  alt="" width="20px">
-                      </div>
-                      <div class="product-body">
-                        <h3 class="product-name"><a href="#">name</a></h3>
-                        <h4 class="product-price"><span class="qty">num x </span></h4>
-                      </div>
-                      <button class="delete" ><i class="fa fa-close"></i></button>
-                    </div>
-  
-  
-                  </div>
-                  <div class="cart-summary">
-                    <small>Item(s) selected</small>
-                    <h5>TOTAL : </h5>
-                  </div>
-                  <div class="cart-btns">
-                    <a routerLink="/cart">View Cart</a>
-                    <a routerLink="/checkout">Checkout <i class="fa fa-arrow-circle-right"></i></a>
-                  </div>
-                </div>
               </div>
               <!-- /Cart -->
   
