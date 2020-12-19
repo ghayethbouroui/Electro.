@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HttpClientModule } from "@angular/common/http";
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HttpClientModule } from "@angular/common/http";
     RegisterComponent,
     LoginComponent,
     NotFoundComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

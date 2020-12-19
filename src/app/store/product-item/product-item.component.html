@@ -1,0 +1,34 @@
+
+        <!-- product -->
+        <div>
+            <div class="product">
+              <div class="product-img">
+                <img alt="" src="assets/img/{{ product.image }}" >
+                <div *ngIf="product.solde" class="product-label">
+                  <span class="sale">-{{product.solde}}%</span>
+                </div>
+              </div>
+              <div class="product-body">
+                <p class="product-category">{{product.category}}</p>
+                <h3 class="product-name"><a href="#">{{product.productName}}</a></h3>
+                <h4 class="product-price">{{product.price -(product.price *product.solde)/100 | currency:'USD'}}
+                  <del *ngIf="product.solde" class="product-old-price">{{product.price| currency:'USD'}}</del>
+                </h4>
+               <!-- <div>
+                  {{product.quantity}} items
+                </div> -->
+                <div class="product-btns">
+                    <button class="add-to-wishlist" (click)="addToWishList(product)"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span>
+                    </button>
+                  <button [routerLink]="['/store/product-detail',id]" class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
+                </div>
+              </div>
+              <div class="add-to-cart">
+                <button class="add-to-cart-btn" (click)="addToCartList(product)"><i class="fa fa-shopping-cart"></i> add to cart</button>
+              </div>
+            </div>
+          </div>
+
+        
+          <!-- /product -->
+  

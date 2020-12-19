@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CarteService } from 'src/app/carte.service';
 import { LocalstorageService } from 'src/app/localstorage.service';
+import { WhishlistService } from 'src/app/whishlist.service';
 
 @Component({
   selector: 'app-wishlist',
@@ -9,32 +11,20 @@ import { LocalstorageService } from 'src/app/localstorage.service';
 export class WishlistComponent implements OnInit {
 
   wishlist;
-  cartList;
+
   constructor(
-    private localStorage : LocalstorageService
+    private localStorage: LocalstorageService,
+    private wishList: WhishlistService,
+    private cartList: CarteService
   ) { }
 
   ngOnInit(): void {
     this.wishlist = this.localStorage.loadFromLocalStorage('wishlist');
-    this.cartList = this.localStorage.loadFromLocalStorage('cartlist');
   }
-clearwishlist(){
-  this.localStorage.clearLocalStorage('wishlist');
-  window.location.reload();
-}
-addToCartList(prod){
-  for (let index = 0; index < this.cartList.length; index++) {
-    if (this.cartList[index].productName == prod.productName) {
-      this.cartList[index].quantity ++;
-      this.localStorage.saveToLocalStorage('cartlist',this.cartList);
-        
-      return window.location.reload();
-      
-    }
+  clearwishlist() {
+    this.wishList.clearwishlist();
   }
-  this.cartList.quantity = 1;
-  this.cartList.push(prod);
-  this.localStorage.saveToLocalStorage('cartlist',this.cartList);
-  window.location.reload();
-}
+  addToCartList(prod) {
+    this.cartList.addToCartList(prod);
+  }
 }

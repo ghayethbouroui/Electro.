@@ -6,6 +6,8 @@ import {RegisterComponent} from './register/register.component';
 import {RouterModule} from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthGuard } from './auth.guard';
+import { ProfileComponent } from './profile/profile.component';
 const routes: Routes = [
   // Define routes for the landing / home page, create a separate component for the layout of home page
   // put only header, footer and router-outlet there
@@ -23,7 +25,8 @@ const routes: Routes = [
       { path: 'store', loadChildren: () => import('./store/store.module').then(m => m.StoreModule) },
       {
         path:'**' , component:NotFoundComponent
-      }
+      },
+      { path: "profile", component: ProfileComponent, canActivate: [AuthGuard] }
     ]
   
   

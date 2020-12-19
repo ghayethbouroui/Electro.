@@ -9,8 +9,10 @@
           <li><a href="#"><i class="fa fa-map-marker"></i> ULT ,tunis</a></li>
         </ul>
         <ul class="header-links pull-right">
-          <li><a routerLink="/login"><i class="fa fa-user-o"></i> Login</a></li>
-          <li><a routerLink="/register"><i class="fa fa-user-plus"></i> REGISTER</a></li>
+          <li *ngIf="!auth.isLoggedIn()"><a routerLink="/login"><i class="fa fa-user-o"></i> Login</a></li>
+          <li *ngIf="auth.isLoggedIn()"><a routerLink="/profile">{{ auth.getUserDetails()?.name }}</a> </li>
+          <li *ngIf="auth.isLoggedIn()"><a (click)="auth.logout()">Logout</a></li>
+          <li *ngIf="!auth.isLoggedIn()"><a routerLink="/register"><i class="fa fa-user-plus"></i> REGISTER</a></li>
         </ul>
       </div>
     </div>
@@ -101,7 +103,6 @@
         <ul class="main-nav nav py-3">
           <li><a routerLink="/">Home</a></li>
           <li><a routerLink="/store">Products</a></li>
-          <li ><a href="#">Contact Us</a></li>
   
         </ul>
         <!-- /NAV -->

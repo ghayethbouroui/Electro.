@@ -1,28 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { CarteService } from 'src/app/carte.service';
 import { LocalstorageService } from 'src/app/localstorage.service';
+import { products } from 'src/app/stock';
 
 @Component({
-  selector: 'app-cartlist',
-  templateUrl: './cartlist.component.html',
-  styleUrls: ['./cartlist.component.css']
+  selector: 'app-thankyou',
+  templateUrl: './thankyou.component.html',
+  styleUrls: ['./thankyou.component.css']
 })
-export class CartlistComponent implements OnInit {
+export class ThankyouComponent implements OnInit {
 
-  cartList;
   totalPrice = 0;
+  cartList;
   constructor(
-      private cartlist : CarteService,
-      private localStorage : LocalstorageService
-  ) {}
-   
+    private localStorage : LocalstorageService
+  ) { }
 
   ngOnInit(): void {
     this.cartList = this.localStorage.loadFromLocalStorage('cartlist');
     this.computeTotalPrice();
-  }
-  clearCart(){
-    this.cartlist.clearCart();
   }
   computeTotalPrice() {
     for (let index = 0; index < this.cartList.length; index++) {

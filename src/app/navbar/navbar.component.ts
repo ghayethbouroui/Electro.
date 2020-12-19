@@ -1,5 +1,6 @@
 import { ThisReceiver, ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from '../authentication.service';
 import { LocalstorageService } from '../localstorage.service';
 
 @Component({
@@ -12,7 +13,8 @@ export class NavbarComponent implements OnInit {
   wishlist;
   qty = 0;
   constructor(
-    private localstorage : LocalstorageService
+    private localstorage : LocalstorageService,
+    public auth: AuthenticationService
   ) { }
 
   ngOnInit(): void {
